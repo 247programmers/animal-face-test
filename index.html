@@ -4,7 +4,9 @@
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+ 
         <!-- Bootstrap CSS -->
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
@@ -13,9 +15,13 @@
             crossorigin="anonymous"
         />
         
-        <!-- Go to www.addthis.com/dashboard to customize your tools -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-603f69fa4a5f5006"></script>
 
+
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <script
+            type="text/javascript"
+            src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-603f69fa4a5f5006"
+        ></script>
 
         <link rel="stylesheet" href="style.css" />
     </head>
@@ -116,17 +122,13 @@
             <div class="file-upload-content">
                 <img class="file-upload-image" id="face-image" src="#" alt="your image" />
                 <p class="result-message"></p>
-                
-                
+
                 <!-- Go to www.addthis.com/dashboard to customize your tools -->
-                
-            
 
                 <div id="label-container"></div>
-                
+
                 <div class="addthis_inline_share_toolbox"></div>
-                
-                
+
                 <div class="image-title-wrap">
                     <button type="button" onclick="removeUpload()" class="remove-image">
                         Remove <span class="image-title">Uploaded Image</span>
@@ -261,7 +263,7 @@
                     default:
                         ResultMessage = "i can't predict your face!!!!";
                 }
-                
+
                 $('.result-message').html(ResultMessage);
 
                 for (let i = 0; i < maxPredictions; i++) {
@@ -269,11 +271,6 @@
                         prediction[i].className + ': ' + prediction[i].probability.toFixed(2);
                     labelContainer.childNodes[i].innerHTML = classPrediction;
                 }
-                
-              
-             
-                
-                
             }
         </script>
     </body>
